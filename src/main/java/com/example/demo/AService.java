@@ -9,6 +9,7 @@ public class AService {
     @Lookup
     public BService getbService() {
         return bService;
+//        return null;
     }
 
     public void setbService(BService bService) {
@@ -18,8 +19,19 @@ public class AService {
     @Autowired
     BService bService;
 
-    public void printBService(){
-        System.out.println(bService);
+    public CService getcService() {
+        return cService;
+    }
+
+    public void setcService(CService cService) {
+        this.cService = cService;
+    }
+
+    @Autowired
+    CService cService;
+
+    public String printBService(){
+        return getbService().toString();
     }
 
 
